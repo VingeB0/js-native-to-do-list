@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS native - To do list</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="phone">
+		<div class="phone-header">
+			<div class="phone-header__left">
+				<div class="phone-header__left-dots">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<a href="javascript:void(0);" class="icon icon-wifi"></a>
+			</div>
+			<div class="phone-header__middle">
+				<span>9:40 PM</span>
+			</div>
+			<div class="phone-header__right">
+				<a href="javascript:void(0);" class="icon icon-bluetooth"></a>
+				<span>100%</span>
+				<a href="javascript:void(0);" class="icon-battery"></a>
+			</div>
+			<div class="phone-header__title">
+				<div class="phone-header__title-left" id="gamburger">
+					<span class="phone-header__title-left-top"></span>
+					<span class="phone-header__title-left-mid"></span>
+					<span class="phone-header__title-left-bot"></span>
+				</div>
+				<div class="phone-header__title-middle">
+					<span>14 Feb, 2016</span>
+				</div>
+			</div>
+		</div>
+		<div class="phone-todo">
+			<div class="phone-todo__header">
+				<label>Add new goal<button class="phone-todo__btn" id="phone-todo__btn"></button>
+				</label>
+				<input id="phone-todo__input" type="text" placeholder="Add new goal">
+				<button id="phone-todo__input-add" class="phone-todo__input-add">Add</button>
+			</div>
+			<ul class="phone-todo__list">
+				<li>
+					<input id="todo-item-40" type="checkbox">
+					<label for="todo-item-40">Do first item list</label>
+					<button class="todo-item-del-40"></button>
+				</li>
+				<li>
+					<input id="todo-item-41" type="checkbox">
+					<label for="todo-item-41">Do second item list</label>
+					<button class="todo-item-del-41"></button>
+				</li>
+				<li>
+					<input id="todo-item-42" type="checkbox">
+					<label for="todo-item-42">Do third item list</label>
+					<button class="todo-item-del-42"></button>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<script src="common.js"></script>
+</body>
+</html>

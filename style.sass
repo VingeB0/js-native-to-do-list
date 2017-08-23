@@ -1,0 +1,321 @@
+*
+	box-sizing: border-box
+
+html
+	height: 100%
+
+body
+	min-height: 100%
+	margin: 0
+	display: flex
+	flex-flow: row wrap
+	align-items: center
+	justify-content: center
+	font-family: sans-serif
+
+.icon
+	display: inline-block
+	vertical-align: middle
+	background: url('img/sprite.png') no-repeat
+	&-wifi
+		width: 10px
+		height: 10px
+		background-position: -45px -5px
+	&-bluetooth
+		width: 10px
+		height: 10px
+		background-position: -25px -5px
+	&-battery
+		position: relative
+		border: 1px solid #fff
+		width: 18px
+		height: 6px
+		background: #fff
+		&:after
+			content: ''
+			position: absolute
+			background-color: #FFF
+			top: -1px
+			right: -4px
+			width: 1px
+			height: 6px
+		&:before
+			content: ''
+			position: absolute
+			right: -3px
+			top: -3px
+			border: 1px solid #fff
+			width: 20px
+			height: 8px
+			background: transparent
+
+.phone
+	max-width: 300px
+	width: 100%
+	padding: 1px 7px 5px 7px
+	border-radius: 5px
+	color: #fff
+	background: linear-gradient(120deg, rgb(0, 183, 239), rgb(0, 92, 181))
+	box-shadow: 0px 0px 43px -8px rgba(0,0,0,0.55)
+	li
+		list-style: none
+	&-header
+		display: flex
+		justify-content: space-between
+		align-items: center
+		flex-flow: row wrap
+		&__left
+			&-dots
+				display: inline-block
+				width: 36px
+				span
+					display: inline-block
+					border-radius: 50%
+					vertical-align: middle
+					background-color: #FFF
+					width: 5px
+					height: 5px
+					margin-right: -2px
+		&__middle
+			margin: auto
+			font-size: 12px
+		&__right
+			display: flex
+			flex-flow: row wrap
+			justify-content: space-between
+			align-items: center
+			font-size: 12px
+			span
+				margin: 0 4px 0 0
+		&__title
+			display: flex
+			flex-flow: row wrap
+			justify-content: space-between
+			align-items: center
+			width: 100%
+			padding: 12px 6px
+			font-size: 14px
+			font-weight: 600
+			&-left
+				position: relative
+				width: 18px
+				height: 18px
+				cursor: pointer
+				span
+					position: absolute
+					display: block
+					height: 2px
+					background-color: #fff
+					margin-bottom: 2px
+					border-radius: 5px
+				&-top
+					width: 18px
+					top: 2px
+					transition: all 0.3s linear
+				&-mid
+					width: 10px
+					top: 8px
+					opacity: 1
+					right: 8px
+					transition: all 0.3s linear
+				&-bot
+					width: 18px
+					top: 14px
+					transition: all 0.3s linear
+			&-middle
+				margin: auto
+				padding-right: 18px
+	&-todo
+		&__btn
+			display: none
+		&__input-add
+			position: absolute
+			right: 0
+			top: 0
+			padding: 15px 14px 15px 14px
+			outline: none
+			border: none
+			color: #E0DBDB
+			background-color: transparent
+			cursor: pointer
+			font-weight: 600
+			transition: all 0.3s
+			&:hover
+				transition: all 0.3s
+				font-weight: 600
+				color: rgb(0, 183, 239)
+		&__header
+			margin-top: 6px
+			position: relative
+			label
+				display: none
+				position: absolute
+				left: 0
+				top: 0
+				position: relative
+				display: block
+				width: 100%
+				padding: 14px 10px 14px 40px
+				color: #E0DBDB
+				background-color: #FFF
+				font-size: 14px
+				border-radius: 2px
+				cursor: pointer
+				transition: 0.3s
+				z-index: 1
+				&:hover
+					transition: all 0.3s
+					padding-left: 15px
+					&:before
+						transition: all 0.3s
+						left: 0
+						opacity: 0
+					&:after
+						content: ''
+						position: absolute
+						left: 12px
+						animation: caretInput 1s infinite					
+						width: 2px
+				&:before
+					content: ''
+					position: absolute
+					left: 12px
+					top: 21px
+					width: 15px
+					height: 3px
+					transition: all 0.3s
+					background-color: rgb(0, 183, 239)
+				&:after
+					content: ''
+					position: absolute
+					left: 18px
+					transition: all 0.3s
+					top: 15px
+					width: 3px
+					height: 15px
+					background-color: rgb(0, 183, 239)
+			input[type="text"]
+				position: absolute
+				top: 0
+				left: 0
+				display: block
+				width: 100%
+				padding: 15px 50px 14px 14px
+				border: none
+				outline: none
+				border-radius: 2px
+				color: rgb(0, 183, 239)
+				caret-color: rgb(0, 183, 239)
+				&::-webkit-input-placeholder
+					font-size: 14px
+					color: #E0DBDB
+		&__list
+			margin-top: 6px
+			padding: 0
+			li
+				position: relative
+				&:hover
+					&:before
+						background-color: #E0DBDB
+				&:before
+					content: ''
+					position: absolute
+					bottom: 0
+					left: 14px
+					height: 1px
+					width: 90%
+					background-color: #F3F2F2
+					z-index: 1
+					transition: all 0.3s
+				&:last-child
+					&:before
+						background-color: transparent
+				&:hover button
+					right: 4px
+					opacity: 1
+			button
+				position: absolute
+				right: -10px
+				opacity: 0
+				top: 11px
+				width: 21px
+				height: 21px
+				border-radius: 50%
+				background-color: transparent
+				border: none
+				outline: none
+				cursor: pointer
+				transition: all 0.3s
+				border: 2px solid #EF5350
+				&:hover
+					background-color: #EF5350
+					&:after
+						color: #fff
+				&:after
+					content: '\002B'
+					position: absolute
+					top: -2px
+					right: 3px
+					transform: rotate(45deg)
+					color: #EF5350
+					font-size: 20px
+					&:hover
+						color: #fff
+					
+			input[type="checkbox"]
+				position: absolute
+				left: -9999px
+			label
+				position: relative
+				display: block
+				padding: 13px 28px 12px 37px
+				color: #000
+				background-color: #FFF
+				transition: 0.3s
+				cursor: pointer
+				&:after
+					content: ''
+					position: absolute
+					left: 11px
+					top: 11px
+					background-color: transparent
+					border-radius: 50%
+					border: 2px solid rgb(0, 183, 239)
+					width: 17px
+					height: 17px
+				&:hover
+					color: rgb(0, 183, 239)
+
+[type="checkbox"]:checked + label
+	&:before
+		content: '\2713'
+		position: absolute
+		left: 15px
+		top: 11px
+		color: #FFF
+		font-weight: 600
+		z-index: 1
+	&:after
+		background-color: rgb(0, 183, 239)
+
+.phone-header__title-left--active
+	.phone-header__title-left-top
+		top: 8px
+		transform: rotate(-45deg)
+		transition: all 0.3s linear
+	.phone-header__title-left-mid
+		right: 0
+		opacity: 0
+		transition: all 0.6s linear
+	.phone-header__title-left-bot
+		transform: rotate(45deg)
+		top: 8px
+		transition: all 0.3s linear
+
+@keyframes caretInput 
+	50%
+		background-color: transparent
+
+@keyframes colorBtnInput
+	50%
+		color: transparent
